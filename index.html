@@ -11,13 +11,14 @@
 
 <script>
 
-  function customAlert() {
-  var customTitle = "Sucesso !";
-  var message = "Dados enviados com sucesso! Novo";
-  alert(message);
+  window.alert = function(title, message){
+    title = "Sucesso !"
+    message = "Dados enviados com sucesso! Novo2"
+    var myElementToShow = document.getElementById("someElementId");
+    myElementToShow.innerHTML = title + "</br>" + message; 
 }
 
-customAlert()
+
   window.history.back();
 
 </script>
